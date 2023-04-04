@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pre-sign-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+    
+}
+.pre-sign-in h3 {
+    color: white;
+    font-size: 23px;
+    font-weight: bolder;
+
+}
+.pre-sign-in button {
+    padding: 10px 20px;
+    border: none;
+    background: rgb(59, 2, 59);
+    color: white;
+    border-radius: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+
+    margin-top: 4px;
+}
+.main-sign {
+    background: rgb(82, 7, 117);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 130px;
+}

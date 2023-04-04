@@ -7,6 +7,7 @@ import { RouterOutputs, api } from "~/utils/api";
 import { Header } from "./components/Header";
 import { useState } from "react";
 import { NoteCard } from "./components/NoteCard";
+import { NoteEditor } from "./components/NoteEditor";
 
 const Home: NextPage = () => {
 
@@ -34,8 +35,8 @@ const Home: NextPage = () => {
 
       )}
       {!sessionData && (
-        <div>
-            <h3>Please sign in to continuw with us</h3>
+        <div className="pre-sign-in">
+            <h3>Please sign in to continue with us</h3>
             <button onClick={handleClick}>Sign In</button>
 
         </div>
@@ -167,8 +168,8 @@ const Content:React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* <NoteEditor
+         {/* // the function that takes an param and return a function that does nothing but mutate some datas in the database} */}
+        <NoteEditor
           onSave={({ title, content }) => {
             void createNote.mutate({
               title,
@@ -176,7 +177,7 @@ const Content:React.FC = () => {
               topicId: selectedTopic?.id ?? "",
             });
           }}
-        /> */}
+        />
       </div>
     </div>
        
